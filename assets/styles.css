@@ -1,8 +1,10 @@
 body{
   background-color: #0f121f;
-  background-image: url(/static/stars.jpg);
+  background-image: url(/static/images/stars.jpg);
   background-repeat-y:no-repeat;
   background-attachment: fixed;
+  background-repeat-x:no-repeat;
+
 color:#fff;
 }
 body *{

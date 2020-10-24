@@ -9,7 +9,7 @@
       <h1>لیست مقالات</h1>
 
       {% for i in articles %}
-      <h2> <a href="#"> {{i.title}} </a> </h2>
+      <h2> <a href="{% url 'articles:detail' slug=i.slug %}"> {{i.title}} </a> </h2>
       <p>
         {{i.snippet}}
       </p>
