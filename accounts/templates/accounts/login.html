@@ -1,0 +1,17 @@
+{% extends 'base.html' %}   
+{% block title %}
+صفحه ورود
+{% endblock title %}
+
+
+{% block content %}
+
+   <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+      {{form}}
+       {% csrf_token %}
+       
+      <input type="submit" name="submit" value="login">
+    </form>
+
+
+{% endblock content %}

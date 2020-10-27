@@ -6,9 +6,9 @@
 <head>
   <meta charset="utf-8">
   <title>
-{% block title %}
+    {% block title %}
 
-{% endblock %}
+    {% endblock %}
   </title>
   <!-- <link rel="stylesheet" href="/static/styles.css"> -->
   <link rel="stylesheet" href="{% static 'styles.css' %}">
@@ -18,16 +18,27 @@
 <body>
 
   <h2>
-<a href="{% url 'articles:list' %}">LOGO</a>
+    <a href="{% url 'articles:list' %}">LOGO</a>
   </h2>
-<div class="wrapper">
+  <div class="wrapper">
 
-</div>
-{% block content %}
+    <nav>]
+      <ul>
+        <li>
+          <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
 
-{% endblock %}
+            {% csrf_token %}
+            <button type="submit">logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
 
+    {% block content %}
 
+    {% endblock %}
+
+  </div>
 
 </body>
 
